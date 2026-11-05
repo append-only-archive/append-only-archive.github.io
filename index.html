@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public OAuth information site for Paperless Append-Only Archive.">
+  <title>Paperless Append-Only Archive</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem;
+    }
+    h1, h2 {
+      line-height: 1.2;
+    }
+    .notice {
+      padding: 1rem;
+      border: 1px solid #8886;
+      border-radius: 0.75rem;
+      background: #8881;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #8886;
+    }
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Paperless Append-Only Archive</h1>
+
+    <p>
+      Paperless Append-Only Archive is a personal, non-commercial archival
+      application. It exports documents from a locally operated Paperless-ngx
+      instance and stores append-only backup objects in the authorized user's
+      own Google Drive.
+    </p>
+
+    <section>
+      <h2>Google Drive access</h2>
+      <p>
+        The application requests only the
+        <code>https://www.googleapis.com/auth/drive.file</code> scope. This
+        permits access to files and folders created by the application and
+        does not grant access to unrelated files in the user's Google Drive.
+      </p>
+    </section>
+
+    <section>
+      <h2>Local and private operation</h2>
+      <p>
+        Processing runs on the user's own computer. Archive objects are sent
+        only to the user's own Google Drive. The application does not use
+        advertising, analytics, tracking, or third-party data sales.
+      </p>
+    </section>
+
+    <div class="notice">
+      OAuth credentials are kept in protected local storage. Archived
+      documents, manifests, identifiers, credentials, tokens, machine paths,
+      configuration files, and operational logs are not published in this
+      repository.
+    </div>
+  </main>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    ·
+    <a href="terms.html">Terms of Use</a>
+  </footer>
+</body>
+</html>
